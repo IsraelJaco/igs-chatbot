@@ -1,33 +1,97 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f2f5;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.chat-container {
-    background: #fff;
+  }
+  
+  .chat-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  /* Área de mensagens */
+  #chat-box {
+    flex: 1;
     padding: 20px;
-    width: 350px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-#chat-box {
-    height: 300px;
     overflow-y: auto;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Estilo das mensagens */
+  .message {
+    max-width: 80%;
+    padding: 12px 16px;
+    border-radius: 18px;
+    line-height: 1.4;
+    font-size: 15px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  /* Mensagens do bot */
+  .bot-message {
+    background-color: #e8eaf6;
+    color: #1a237e;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+  }
+  
+  /* Mensagens do usuário */
+  .user-message {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+  }
+  
+  /* Área de entrada */
+  .input-area {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  #user-input {
+    flex: 1;
+    padding: 12px;
     border: 1px solid #ccc;
-    margin-bottom: 10px;
-    padding: 10px;
-}
-
-#user-input {
-    width: 75%;
-    padding: 8px;
-}
-
-button {
-    padding: 8px 10px;
-}
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 12px 20px;
+    background-color: #10a37f;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0e8c6e;
+  }
+  
